@@ -53,6 +53,11 @@ class MyComplexNumber
         @@sign=0
         return bulkAll
     end
+   def self.get_stats()
+        puts "sum operations (+) = #{@@operation['sum']}\n-number of opertaion multibly (*) = #{@@operation['multiplication']} "
+        puts "bulk add operations = #{@@operation['bulk_add']}\n-number of opertaion bulk_multiply = #{@@operation['bulk_multiply']} "
+
+    end
 
 
 end
@@ -61,10 +66,10 @@ c1=ComplexNumber.new(3,2)
 c2=ComplexNumber.new(1,7)
 
 
-# add
+# adding
 puts " sum = #{(c1+c2).to_s}"
 
-# multi
+# multiplication
 puts " multiplication= #{(c1*c2).to_s}"
 
 # bulk_Add
@@ -77,4 +82,7 @@ puts "bulk_Add = #{ComplexNumber.bulk_add(arrayOfObj).to_s}"
 # bulk_multiply
 puts "bulk_multiply = #{ComplexNumber.bulk_multiply(arrayOfObj).to_s}"
 
+#now the stats
+puts"stats "
+ComplexNumber.get_stats()
 
